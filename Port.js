@@ -37,6 +37,35 @@ contactForm.addEventListener("submit", function(event) {
         isValid = false;
     }
 
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailInput.value.trim() === "") {
+
+        emailError.textContent = "Please enter your email address.";
+        isValid = false;
+
+    } else if (!emailPattern.test(emailInput.value.trim())) {
+
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+    }
+
+    // Subject validation
+    if (subjectInput.value.trim() === "") {
+
+        subjectError.textContent = "Please enter a subject.";
+        isValid = false;
+
+    } else if (subjectInput.value.trim().length < 5) {
+
+        subjectError.textContent = "Subject must contain at least 5 characters.";
+        isValid = false;
+    }
+
+
+    
+
     
 
 });
