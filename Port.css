@@ -112,3 +112,16 @@ footer {
     padding: 20px;
     margin-top: 30px;
 }
+
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: #2e7d32;
+    font-size: 15px;
+    margin-top: 15px;
+}

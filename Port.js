@@ -64,7 +64,27 @@ contactForm.addEventListener("submit", function(event) {
     }
 
 
-    
+    // Message validation
+    if (messageInput.value.trim() === "") {
+
+        messageError.textContent = "Please enter your message.";
+        isValid = false;
+
+    } else if (messageInput.value.trim().length < 10) {
+
+        messageError.textContent = "Message must contain at least 10 characters.";
+        isValid = false;
+    }
+
+
+    // Success message
+    if (isValid) {
+
+        successMessage.textContent =
+            "Your message has been submitted successfully!";
+
+        contactForm.reset();
+    }
 
     
 
